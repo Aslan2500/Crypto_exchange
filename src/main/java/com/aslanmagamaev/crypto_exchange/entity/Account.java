@@ -13,10 +13,10 @@ public class Account {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "email")
+    @Column(name = "email", unique = true)
     private String email;
 
-    @Column(name = "passport")
+    @Column(name = "passport", unique = true)
     private int passport;
     @Column(name = "password")
     private String password;
