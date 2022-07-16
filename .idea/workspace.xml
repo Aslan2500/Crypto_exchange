@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72c176f1-774c-45e3-a19f-06a64d2c13d2" name="Changes" comment="Exceptions added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/entity/AccountData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/services/DefaultUserService.java" afterDir="false" />
+    <list default="true" id="72c176f1-774c-45e3-a19f-06a64d2c13d2" name="Changes" comment="New dependencies for @NotEmpty annotation + UserService class updated + DefaultUserService updated">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/configuration/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/configuration/MySecurityInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/RegistrationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto_exchange.iml" beforeDir="false" afterPath="$PROJECT_DIR$/crypto_exchange.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/repositories/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/services/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +100,7 @@
       <updated>1657893788897</updated>
       <workItem from="1657893790224" duration="1254000" />
       <workItem from="1657895209188" duration="606000" />
-      <workItem from="1657896021063" duration="3385000" />
+      <workItem from="1657896021063" duration="6343000" />
     </task>
     <task id="LOCAL-00001" summary="Project initialized">
       <created>1657895273056</created>
@@ -126,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657904688733</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="New dependencies for @NotEmpty annotation + UserService class updated + DefaultUserService updated">
+      <created>1657907886107</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657907886107</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +151,7 @@
     <MESSAGE value="Project initialized" />
     <MESSAGE value="Project initialized 1.1" />
     <MESSAGE value="Exceptions added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exceptions added" />
+    <MESSAGE value="New dependencies for @NotEmpty annotation + UserService class updated + DefaultUserService updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="New dependencies for @NotEmpty annotation + UserService class updated + DefaultUserService updated" />
   </component>
 </project>

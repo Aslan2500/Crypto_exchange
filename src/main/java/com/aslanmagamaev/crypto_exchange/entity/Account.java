@@ -9,15 +9,12 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
-
     @Column(name = "name")
     private String name;
-
+    @Column(name = "surname")
+    private String surname;
     @Column(name = "email", unique = true)
     private String email;
-
-    @Column(name = "passport", unique = true)
-    private int passport;
     @Column(name = "password")
     private String password;
     @Column(name = "amount_of_money")
@@ -28,10 +25,10 @@ public class Account {
     public Account() {
     }
 
-    public Account(String name, String email, int passport, String password) {
+    public Account(String name, String email, String surname, String password) {
         this.name = name;
+        this.surname = surname;
         this.email = email;
-        this.passport = passport;
         this.password = password;
     }
 
@@ -51,12 +48,12 @@ public class Account {
         this.email = email;
     }
 
-    public int getPassport() {
-        return passport;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setPassport(int passport) {
-        this.passport = passport;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public String getPassword() {
