@@ -1,9 +1,11 @@
 package com.aslanmagamaev.crypto_exchange.entity;
 
+import java.util.Collection;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "accounts")
+@Table(name = "accounts", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,14 +24,30 @@ public class Account {
     @Column(name = "amount_of_bitcoin")
     private double amountOfBitcoin;
 
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "accounts_roles",
+            joinColumns = @JoinColumn(name = "account_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+    private Collection<Role> roles;
+
     public Account() {
     }
 
-    public Account(String name, String email, String surname, String password) {
+    public Account(String name, String surname, String email, String password, Collection<Role> roles) {
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.password = password;
+        this.roles = roles;
+    }
+
+    public Collection<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Collection<Role> roles) {
+        this.roles = roles;
     }
 
     public String getName() {
