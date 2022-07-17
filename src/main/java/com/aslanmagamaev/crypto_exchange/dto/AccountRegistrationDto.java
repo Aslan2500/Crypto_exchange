@@ -6,6 +6,10 @@ public class AccountRegistrationDto {
     private String email;
     private String password;
 
+    public AccountRegistrationDto() {
+
+    }
+
     public AccountRegistrationDto(String name, String surname, String email, String password) {
         this.name = name;
         this.surname = surname;
