@@ -1,4 +1,4 @@
-package com.aslanmagamaev.crypto_exchange.web;
+package com.aslanmagamaev.crypto_exchange.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

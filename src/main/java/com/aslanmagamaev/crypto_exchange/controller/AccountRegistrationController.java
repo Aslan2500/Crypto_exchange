@@ -1,4 +1,4 @@
-package com.aslanmagamaev.crypto_exchange.web;
+package com.aslanmagamaev.crypto_exchange.controller;
 
 import com.aslanmagamaev.crypto_exchange.dto.AccountRegistrationDto;
 import com.aslanmagamaev.crypto_exchange.service.AccountService;
