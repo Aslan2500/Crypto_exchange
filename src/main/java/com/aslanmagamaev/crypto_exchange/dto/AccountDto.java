@@ -20,6 +20,10 @@ public class AccountDto {
         this.password = password;
     }
 
+    public AccountDto(int amountOfMoney) {
+        this.amountOfMoney = amountOfMoney;
+    }
+
     public String getName() {
         return name;
     }

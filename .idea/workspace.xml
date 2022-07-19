@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72c176f1-774c-45e3-a19f-06a64d2c13d2" name="Changes" comment="Minor changes and fixes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/DepositController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/deposit.html" afterDir="false" />
+    <list default="true" id="72c176f1-774c-45e3-a19f-06a64d2c13d2" name="Changes" comment="Deposit html page added but not finished">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/AccountRegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/AccountRegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/dto/AccountRegistrationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/dto/AccountDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/entity/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/entity/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto_exchange.iml" beforeDir="false" afterPath="$PROJECT_DIR$/crypto_exchange.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/DepositController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/DepositController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/dto/AccountDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/dto/AccountDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/repositories/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/deposit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/deposit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +114,8 @@
       <workItem from="1658057534092" duration="4177000" />
       <workItem from="1658078845780" duration="4181000" />
       <workItem from="1658103482987" duration="7440000" />
+      <workItem from="1658247292589" duration="585000" />
+      <workItem from="1658252919286" duration="7934000" />
     </task>
     <task id="LOCAL-00001" summary="Project initialized">
       <created>1657895273056</created>
@@ -178,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658091416582</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Deposit html page added but not finished">
+      <created>1658247344291</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1658247344291</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +214,7 @@
     <MESSAGE value="Frontend logic of registration feature added" />
     <MESSAGE value="Register + login + logout - full logic done" />
     <MESSAGE value="Minor changes and fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor changes and fixes" />
+    <MESSAGE value="Deposit html page added but not finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deposit html page added but not finished" />
   </component>
 </project>
