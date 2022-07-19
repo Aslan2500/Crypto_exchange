@@ -1,16 +1,19 @@
 package com.aslanmagamaev.crypto_exchange.dto;
 
-public class AccountRegistrationDto {
+public class AccountDto {
     private String name;
     private String surname;
     private String email;
     private String password;
+    private int amountOfMoney;
+    private double amountOfBitcoin;
 
-    public AccountRegistrationDto() {
+
+    public AccountDto() {
 
     }
 
-    public AccountRegistrationDto(String name, String surname, String email, String password) {
+    public AccountDto(String name, String surname, String email, String password) {
         this.name = name;
         this.surname = surname;
         this.email = email;
@@ -47,5 +50,21 @@ public class AccountRegistrationDto {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getAmountOfMoney() {
+        return amountOfMoney;
+    }
+
+    public void setAmountOfMoney(int amountOfMoney) {
+        this.amountOfMoney = amountOfMoney;
+    }
+
+    public double getAmountOfBitcoin() {
+        return amountOfBitcoin;
+    }
+
+    public void setAmountOfBitcoin(double amountOfBitcoin) {
+        this.amountOfBitcoin = amountOfBitcoin;
     }
 }

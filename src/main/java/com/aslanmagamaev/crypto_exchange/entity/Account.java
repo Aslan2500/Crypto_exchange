@@ -81,4 +81,20 @@ public class Account {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public int getAmountOfMoney() {
+        return amountOfMoney;
+    }
+
+    public void setAmountOfMoney(int amountOfMoney) {
+        this.amountOfMoney = amountOfMoney;
+    }
+
+    public double getAmountOfBitcoin() {
+        return amountOfBitcoin;
+    }
+
+    public void setAmountOfBitcoin(double amountOfBitcoin) {
+        this.amountOfBitcoin = amountOfBitcoin;
+    }
 }

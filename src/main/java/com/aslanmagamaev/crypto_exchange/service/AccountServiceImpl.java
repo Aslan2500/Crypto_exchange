@@ -1,6 +1,6 @@
 package com.aslanmagamaev.crypto_exchange.service;
 
-import com.aslanmagamaev.crypto_exchange.dto.AccountRegistrationDto;
+import com.aslanmagamaev.crypto_exchange.dto.AccountDto;
 import com.aslanmagamaev.crypto_exchange.entity.Account;
 import com.aslanmagamaev.crypto_exchange.entity.Role;
 import com.aslanmagamaev.crypto_exchange.repositories.AccountRepository;
@@ -29,12 +29,18 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public Account save(AccountRegistrationDto registrationDto) {
-        Account account = new Account(registrationDto.getName(),
-                registrationDto.getSurname(),
-                registrationDto.getEmail(),
-                passwordEncoder.encode(registrationDto.getPassword()), List.of(new Role("ROLE_USER")));
+    public Account save(AccountDto accountDto) {
+        Account account = new Account(accountDto.getName(),
+                accountDto.getSurname(),
+                accountDto.getEmail(),
+                passwordEncoder.encode(accountDto.getPassword()), List.of(new Role("ROLE_USER")));
         return accountRepository.save(account);
+    }
+
+    @Override
+    public void deposit(AccountDto accountDto) {
+        Account account = accountRepository.findByEmail(accountDto.getEmail());
+        account.setAmountOfMoney(accountDto.getAmountOfMoney());
     }
 
     @Override

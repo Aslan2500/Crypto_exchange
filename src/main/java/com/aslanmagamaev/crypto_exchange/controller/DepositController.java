@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/registration")
-public class AccountRegistrationController {
+@RequestMapping("/deposit")
+public class DepositController {
 
     @Autowired
     private AccountService accountService;
@@ -22,13 +22,13 @@ public class AccountRegistrationController {
     }
 
     @GetMapping
-    public String showRegistrationForm() {
-        return "registration";
+    public String showDepositForm() {
+        return "deposit";
     }
 
     @PostMapping
-    public String registerAccount(@ModelAttribute("account") AccountDto registrationDto) {
-        accountService.save(registrationDto);
-        return "redirect:/registration?success";
+    public String depositAccount(@ModelAttribute("account") AccountDto accountDto) {
+        accountService.deposit(accountDto);
+        return "redirect:/index";
     }
 }
