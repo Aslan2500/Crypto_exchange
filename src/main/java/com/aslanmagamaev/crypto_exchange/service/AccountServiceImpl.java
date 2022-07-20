@@ -40,9 +40,10 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public void deposit(AccountDto accountDto) {
-        Account account = (Account) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        account.setAmountOfMoney(accountDto.getAmountOfMoney());
-
+        Account account = accountRepository.findByEmail((String) SecurityContextHolder.getContext().getAuthentication().getName());
+        account.setAmountOfMoney(account.getAmountOfMoney() + accountDto.getAmountOfMoney());
+        System.out.println(account.getAmountOfMoney());
+        accountRepository.save(account);
     }
 
     @Override

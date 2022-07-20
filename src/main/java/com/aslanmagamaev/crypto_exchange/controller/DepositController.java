@@ -4,7 +4,10 @@ import com.aslanmagamaev.crypto_exchange.dto.AccountDto;
 import com.aslanmagamaev.crypto_exchange.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/deposit")
@@ -26,6 +29,6 @@ public class DepositController {
     @PostMapping
     public String depositAccount(@ModelAttribute("account") AccountDto accountDto) {
         accountService.deposit(accountDto);
-        return "redirect:/index";
+        return "redirect:/deposit?success";
     }
 }

@@ -27,6 +27,12 @@
 <br>
 <br>
 <div class="container">
+    <div th:if="${param.success}">
+        <div class="alert alert-info">Operation succeeded.</div>
+    </div>
+    <div th:if="${param.error}">
+        <div class="alert alert-danger">Operation failed</div>
+    </div>
     <h3>How much money would you like to deposit?</h3>
     <form th:action="@{/deposit}" method="post" th:object="${account}">
         <div class="form-group">
@@ -34,7 +40,7 @@
                    placeholder="Enter amount of money" autofocus="autofocus"/>
         </div>
         <div>
-            <a href="#" th:href="@{/index}"><button type="submit" class="btn btn-success">Deposit</button></a>
+            <button type="submit" class="btn btn-success">Deposit</button>
         </div>
     </form>
 </div>
