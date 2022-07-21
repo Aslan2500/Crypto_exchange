@@ -8,4 +8,5 @@ public interface AccountService extends UserDetailsService {
     Account save(AccountDto accountDto);
 
     void deposit(AccountDto accountDto);
+    void withdraw(AccountDto accountDto);
 }

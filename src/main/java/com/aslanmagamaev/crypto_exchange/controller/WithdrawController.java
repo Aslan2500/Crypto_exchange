@@ -13,9 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping("/deposit")
-public class DepositController {
-
+@RequestMapping("/withdraw")
+public class WithdrawController {
     @Autowired
     private AccountService accountService;
 
@@ -25,16 +24,16 @@ public class DepositController {
     }
 
     @GetMapping
-    public String showDepositForm() {
-        return "deposit";
+    public String showWithdrawtForm() {
+        return "withdraw";
     }
 
     @PostMapping
-    public String depositAccount(@Valid @ModelAttribute("account") AccountDto accountDto, BindingResult bindingResult) {
+    public String withdrawAccount(@Valid @ModelAttribute("account") AccountDto accountDto, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            return "deposit";
+            return "withdraw";
         }
-        accountService.deposit(accountDto);
-        return "redirect:/deposit?success";
+        accountService.withdraw(accountDto);
+        return "redirect:/withdraw?success";
     }
 }

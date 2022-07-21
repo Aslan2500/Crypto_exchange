@@ -33,15 +33,15 @@
     <div th:if="${param.error}">
         <div class="alert alert-danger">Operation failed</div>
     </div>
-    <h3>How much money would you like to deposit?</h3>
-    <form th:action="@{/deposit}" method="post" th:object="${account}">
+    <h3>How much money would you like to withdraw?</h3>
+    <form th:action="@{/withdraw}" method="post" th:object="${account}">
         <div class="form-group">
-            <input id="amountOfMoney" type="number" min="0" class="form-control" th:field="${account.amountOfMoney}"
-                   placeholder="Enter amount of money" autofocus="autofocus"/>
+            <input type="number" min="0" class="form-control" th:field="${account.amountOfMoney}"
+                   autofocus="autofocus"/>
             <div class="alert alert-warning" th:if="${#fields.hasErrors('amountOfMoney')}" th:errors="${account.amountOfMoney}"></div>
         </div>
         <div>
-            <button type="submit" class="btn btn-success">Deposit</button>
+            <button type="submit" class="btn btn-success">Withdraw</button>
         </div>
     </form>
 </div>
