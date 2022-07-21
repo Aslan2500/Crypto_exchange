@@ -3,6 +3,7 @@ package com.aslanmagamaev.crypto_exchange.service;
 import com.aslanmagamaev.crypto_exchange.dto.AccountDto;
 import com.aslanmagamaev.crypto_exchange.entity.Account;
 import com.aslanmagamaev.crypto_exchange.entity.Role;
+import com.aslanmagamaev.crypto_exchange.parse.BitcoinPriceParse;
 import com.aslanmagamaev.crypto_exchange.repositories.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -20,14 +21,14 @@ import java.util.stream.Collectors;
 @Service
 public class AccountServiceImpl implements AccountService {
 
-    @Autowired
-    private AccountRepository accountRepository;
-
-    private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-
     public AccountServiceImpl(AccountRepository accountRepository) {
         this.accountRepository = accountRepository;
     }
+
+    private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
+    @Autowired
+    private AccountRepository accountRepository;
 
     @Override
     public Account save(AccountDto accountDto) {
@@ -39,16 +40,23 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public void deposit(AccountDto accountDto) {
+    public Account deposit(AccountDto accountDto) {
         Account account = getCurrentAccount();
         account.setAmountOfMoney(account.getAmountOfMoney() + accountDto.getAmountOfMoney());
-        accountRepository.save(account);
+        return accountRepository.save(account);
     }
 
     @Override
-    public void withdraw(AccountDto accountDto) {
+    public Account withdraw(AccountDto accountDto) {
         Account account = getCurrentAccount();
         account.setAmountOfMoney(account.getAmountOfMoney() - accountDto.getAmountOfMoney());
+        return accountRepository.save(account);
+    }
+
+    @Override
+    public void buyBitcoin(AccountDto accountDto) {
+        Account account = withdraw(accountDto);
+        account.setAmountOfBitcoin(account.getAmountOfBitcoin() + (accountDto.getAmountOfMoney() / BitcoinPriceParse.getPrice()));
         accountRepository.save(account);
     }
 

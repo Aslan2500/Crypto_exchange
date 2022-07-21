@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto exchange</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+</head>
+<body>
+<!-- create navigation bar (header) -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" th:href="@{/}">Crypto exchange by Magamaev Aslan</a>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<br>
+<div class="container">
+    <div th:if="${param.success}">
+        <div class="alert alert-info">Operation succeeded.</div>
+    </div>
+    <div th:if="${param.error}">
+        <div class="alert alert-danger">Operation failed</div>
+    </div>
+    <h3>How much money would you like to spend on Bitcoin?</h3>
+    <form th:action="@{/buy_bitcoin}" method="post" th:object="${account}">
+        <div class="form-group">
+            <input id="amountOfMoney" type="number" min="0" th:max="${currentBalance}" class="form-control" th:field="${account.amountOfMoney}"
+                   placeholder="Enter amount of money" autofocus="autofocus"/>
+            <div class="alert alert-warning" th:if="${#fields.hasErrors('amountOfMoney')}" th:errors="${account.amountOfMoney}"></div>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-success">Buy</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

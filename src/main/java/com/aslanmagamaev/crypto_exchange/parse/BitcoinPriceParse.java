@@ -2,6 +2,7 @@ package com.aslanmagamaev.crypto_exchange.parse;
 
 import org.apache.commons.io.IOUtils;
 import org.json.JSONObject;
+import org.springframework.context.annotation.Bean;
 
 import java.net.URL;
 import java.nio.charset.StandardCharsets;

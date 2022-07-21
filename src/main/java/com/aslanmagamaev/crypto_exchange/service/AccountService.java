@@ -6,9 +6,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 
 public interface AccountService extends UserDetailsService {
     Account save(AccountDto accountDto);
-
-    void deposit(AccountDto accountDto);
-    void withdraw(AccountDto accountDto);
-
+    Account deposit(AccountDto accountDto);
+    Account withdraw(AccountDto accountDto);
+    void buyBitcoin(AccountDto accountDto);
     public Account getCurrentAccount();
 }

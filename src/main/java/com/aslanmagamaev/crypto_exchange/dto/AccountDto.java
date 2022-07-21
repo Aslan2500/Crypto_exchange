@@ -26,6 +26,10 @@ public class AccountDto {
         this.amountOfMoney = amountOfMoney;
     }
 
+    public AccountDto(double amountOfBitcoin) {
+        this.amountOfBitcoin = amountOfBitcoin;
+    }
+
     public String getName() {
         return name;
     }
