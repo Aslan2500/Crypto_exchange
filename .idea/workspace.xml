@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72c176f1-774c-45e3-a19f-06a64d2c13d2" name="Changes" comment="Deposit validation added (you can deposit negative amount of money now) + withdraw function added but not finished">
+    <list default="true" id="72c176f1-774c-45e3-a19f-06a64d2c13d2" name="Changes" comment="Withdraw function working properly with validation">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/parse/BitcoinPriceParse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/parse/Parse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/WithdrawController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/WithdrawController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/dto/AccountDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/dto/AccountDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/repositories/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/withdraw.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/withdraw.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +47,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/aslanmagamaev/IdeaProjects/crypto_exchange/src/main/java/com/aslanmagamaev/crypto_exchange&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -60,6 +57,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -116,7 +116,8 @@
       <workItem from="1658252919286" duration="8173000" />
       <workItem from="1658343973267" duration="4663000" />
       <workItem from="1658394735352" duration="5874000" />
-      <workItem from="1658406205169" duration="2977000" />
+      <workItem from="1658406205169" duration="4406000" />
+      <workItem from="1658421872386" duration="309000" />
     </task>
     <task id="LOCAL-00001" summary="Project initialized">
       <created>1657895273056</created>
@@ -216,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658408370111</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Withdraw function working properly with validation">
+      <created>1658411145490</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1658411145490</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +256,7 @@
     <MESSAGE value="Deposit function reworked but need to add validation" />
     <MESSAGE value="Email validation added" />
     <MESSAGE value="Deposit validation added (you can deposit negative amount of money now) + withdraw function added but not finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deposit validation added (you can deposit negative amount of money now) + withdraw function added but not finished" />
+    <MESSAGE value="Withdraw function working properly with validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Withdraw function working properly with validation" />
   </component>
 </project>
