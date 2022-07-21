@@ -36,7 +36,7 @@
     <h3>How much money would you like to withdraw?</h3>
     <form th:action="@{/withdraw}" method="post" th:object="${account}">
         <div class="form-group">
-            <input type="number" min="0" class="form-control" th:field="${account.amountOfMoney}"
+            <input type="number" min="0" th:max="${currentBalance}" class="form-control" th:field="${account.amountOfMoney}"
                    autofocus="autofocus"/>
             <div class="alert alert-warning" th:if="${#fields.hasErrors('amountOfMoney')}" th:errors="${account.amountOfMoney}"></div>
         </div>

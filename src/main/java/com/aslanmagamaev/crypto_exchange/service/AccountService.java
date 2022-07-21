@@ -9,4 +9,6 @@ public interface AccountService extends UserDetailsService {
 
     void deposit(AccountDto accountDto);
     void withdraw(AccountDto accountDto);
+
+    public Account getCurrentAccount();
 }

@@ -52,7 +52,8 @@ public class AccountServiceImpl implements AccountService {
         accountRepository.save(account);
     }
 
-    private Account getCurrentAccount() {
+    @Override
+    public Account getCurrentAccount() {
         return accountRepository.findByEmail((String) SecurityContextHolder.getContext().getAuthentication().getName());
     }
 

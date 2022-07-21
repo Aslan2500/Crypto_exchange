@@ -11,7 +11,6 @@ public class AccountDto {
     private int amountOfMoney;
     private double amountOfBitcoin;
 
-
     public AccountDto() {
 
     }

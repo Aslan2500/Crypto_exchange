@@ -1,6 +1,7 @@
 package com.aslanmagamaev.crypto_exchange.controller;
 
 import com.aslanmagamaev.crypto_exchange.dto.AccountDto;
+import com.aslanmagamaev.crypto_exchange.entity.Account;
 import com.aslanmagamaev.crypto_exchange.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,8 +24,14 @@ public class WithdrawController {
         return new AccountDto();
     }
 
+    @ModelAttribute("currentBalance")
+    public int currentBalance() {
+        Account account = accountService.getCurrentAccount();
+        return account.getAmountOfMoney();
+    }
+
     @GetMapping
-    public String showWithdrawtForm() {
+    public String showWithdrawForm() {
         return "withdraw";
     }
 
