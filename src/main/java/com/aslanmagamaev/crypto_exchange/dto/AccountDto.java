@@ -1,8 +1,11 @@
 package com.aslanmagamaev.crypto_exchange.dto;
 
+import javax.validation.constraints.Email;
+
 public class AccountDto {
     private String name;
     private String surname;
+    @Email
     private String email;
     private String password;
     private int amountOfMoney;

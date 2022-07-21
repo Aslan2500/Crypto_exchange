@@ -40,6 +40,9 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public void deposit(AccountDto accountDto) {
+        if (accountDto.getAmountOfMoney() < 0) {
+            throw new IllegalArgumentException();
+        }
         Account account = accountRepository.findByEmail((String) SecurityContextHolder.getContext().getAuthentication().getName());
         account.setAmountOfMoney(account.getAmountOfMoney() + accountDto.getAmountOfMoney());
         System.out.println(account.getAmountOfMoney());
