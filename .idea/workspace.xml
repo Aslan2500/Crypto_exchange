@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72c176f1-774c-45e3-a19f-06a64d2c13d2" name="Changes" comment="Bitcoin parses added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/BuyBitcoinController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/buy_bitcoin.html" afterDir="false" />
+    <list default="true" id="72c176f1-774c-45e3-a19f-06a64d2c13d2" name="Changes" comment="Buy Bitcoin function added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto_exchange.iml" beforeDir="false" afterPath="$PROJECT_DIR$/crypto_exchange.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/dto/AccountDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/dto/AccountDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/parse/BitcoinPriceParse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/parse/BitcoinPriceParse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +116,7 @@
       <workItem from="1658343973267" duration="4663000" />
       <workItem from="1658394735352" duration="5874000" />
       <workItem from="1658406205169" duration="4406000" />
-      <workItem from="1658421872386" duration="3162000" />
+      <workItem from="1658421872386" duration="4747000" />
     </task>
     <task id="LOCAL-00001" summary="Project initialized">
       <created>1657895273056</created>
@@ -237,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658433052953</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Buy Bitcoin function added">
+      <created>1658439794626</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1658439794626</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +271,7 @@
     <MESSAGE value="Deposit validation added (you can deposit negative amount of money now) + withdraw function added but not finished" />
     <MESSAGE value="Withdraw function working properly with validation" />
     <MESSAGE value="Bitcoin parses added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bitcoin parses added" />
+    <MESSAGE value="Buy Bitcoin function added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Buy Bitcoin function added" />
   </component>
 </project>

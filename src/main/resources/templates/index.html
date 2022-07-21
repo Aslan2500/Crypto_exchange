@@ -39,13 +39,11 @@ xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
     <h1>Welcome <span sec:authentication="principal.username"> User</span></h1>
     <h2>Options:</h2>
     <br>
-    <button><span><a href="/" th:href="@{/deposit}">Deposit money</a></span></button>
+    <a href="/" th:href="@{/deposit}" class="btn btn-warning btn-lg btn-block" role="button">Deposit money</a>
     <br>
+    <a href="/" th:href="@{/withdraw}" class="btn btn-warning btn-lg btn-block" role="button">Withdraw money</a>
     <br>
-    <button><span><a href="/" th:href="@{/withdraw}">Withdraw money</a></span></button>
-    <br>
-    <br>
-    <button><span><a href="/" th:href="@{/buy_bitcoin}">Buy Bitcoin</a></span></button>
+    <a href="/" th:href="@{/buy_bitcoin}" class="btn btn-warning btn-lg btn-block" role="button">Buy Bitcoin</a>
 </div>
 </body>
 </html>
