@@ -9,5 +9,6 @@ public interface AccountService extends UserDetailsService {
     Account deposit(AccountDto accountDto);
     Account withdraw(AccountDto accountDto);
     void buyBitcoin(AccountDto accountDto);
+    void sellBitcoin(AccountDto accountDto);
     public Account getCurrentAccount();
 }

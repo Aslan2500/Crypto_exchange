@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72c176f1-774c-45e3-a19f-06a64d2c13d2" name="Changes" comment="Buy Bitcoin function added">
+    <list default="true" id="72c176f1-774c-45e3-a19f-06a64d2c13d2" name="Changes" comment="Buttons in main menu changed">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/SellBitcoinController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/sell_bitcoin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +120,8 @@
       <workItem from="1658343973267" duration="4663000" />
       <workItem from="1658394735352" duration="5874000" />
       <workItem from="1658406205169" duration="4406000" />
-      <workItem from="1658421872386" duration="4747000" />
+      <workItem from="1658421872386" duration="5036000" />
+      <workItem from="1658482112094" duration="1430000" />
     </task>
     <task id="LOCAL-00001" summary="Project initialized">
       <created>1657895273056</created>
@@ -237,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658439794626</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Buttons in main menu changed">
+      <created>1658442321293</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1658442321293</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,6 +284,7 @@
     <MESSAGE value="Withdraw function working properly with validation" />
     <MESSAGE value="Bitcoin parses added" />
     <MESSAGE value="Buy Bitcoin function added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Buy Bitcoin function added" />
+    <MESSAGE value="Buttons in main menu changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Buttons in main menu changed" />
   </component>
 </project>

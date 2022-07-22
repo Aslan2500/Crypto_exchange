@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto exchange</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+</head>
+<body>
+<!-- create navigation bar (header) -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" th:href="@{/}">Crypto exchange by Magamaev Aslan</a>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<br>
+<div class="container">
+    <div th:if="${param.success}">
+        <div class="alert alert-info">Operation succeeded.</div>
+    </div>
+    <div th:if="${param.error}">
+        <div class="alert alert-danger">Operation failed</div>
+    </div>
+    <h3>How much bitcoin would you like to sell?</h3>
+    <form th:action="@{/sell_bitcoin}" method="post" th:object="${account}">
+        <div class="form-group">
+            <input id="amountOfBitcoin" type="number" min="0.00000" th:max="${currentBitcoinBalance}" step="0.00001" class="form-control" th:field="${account.amountOfBitcoin}"
+                   placeholder="Enter amount of Bitcoin" autofocus="autofocus"/>
+            <div class="alert alert-warning" th:if="${#fields.hasErrors('amountOfBitcoin')}" th:errors="${account.amountOfBitcoin}"></div>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-success">Sell</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

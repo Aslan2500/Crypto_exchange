@@ -61,6 +61,14 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
+    public void sellBitcoin(AccountDto accountDto) {
+        accountDto.setAmountOfMoney((int) (BitcoinPriceParse.getPrice() * accountDto.getAmountOfBitcoin()));
+        Account account = deposit(accountDto);
+        account.setAmountOfBitcoin(account.getAmountOfBitcoin() - accountDto.getAmountOfBitcoin());
+        accountRepository.save(account);
+    }
+
+    @Override
     public Account getCurrentAccount() {
         return accountRepository.findByEmail((String) SecurityContextHolder.getContext().getAuthentication().getName());
     }
