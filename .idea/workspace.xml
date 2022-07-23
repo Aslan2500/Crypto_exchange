@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72c176f1-774c-45e3-a19f-06a64d2c13d2" name="Changes" comment="Buttons in main menu changed">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/SellBitcoinController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/sell_bitcoin.html" afterDir="false" />
+    <list default="true" id="72c176f1-774c-45e3-a19f-06a64d2c13d2" name="Changes" comment="Sell Bitcoin option with validation added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/service/AccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/BuyBitcoinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/BuyBitcoinController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/DepositController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/DepositController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/MyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/SellBitcoinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/SellBitcoinController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/WithdrawController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aslanmagamaev/crypto_exchange/controller/WithdrawController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/buy_bitcoin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/buy_bitcoin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/deposit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/deposit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sell_bitcoin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sell_bitcoin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/withdraw.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/withdraw.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +126,10 @@
       <workItem from="1658394735352" duration="5874000" />
       <workItem from="1658406205169" duration="4406000" />
       <workItem from="1658421872386" duration="5036000" />
-      <workItem from="1658482112094" duration="1430000" />
+      <workItem from="1658482112094" duration="4725000" />
+      <workItem from="1658495427238" duration="1720000" />
+      <workItem from="1658519594515" duration="132000" />
+      <workItem from="1658573635160" duration="2135000" />
     </task>
     <task id="LOCAL-00001" summary="Project initialized">
       <created>1657895273056</created>
@@ -249,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658442321293</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Sell Bitcoin option with validation added">
+      <created>1658485338346</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1658485338346</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +300,7 @@
     <MESSAGE value="Bitcoin parses added" />
     <MESSAGE value="Buy Bitcoin function added" />
     <MESSAGE value="Buttons in main menu changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Buttons in main menu changed" />
+    <MESSAGE value="Sell Bitcoin option with validation added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sell Bitcoin option with validation added" />
   </component>
 </project>

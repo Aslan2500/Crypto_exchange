@@ -27,23 +27,34 @@
 <br>
 <br>
 <div class="container">
-    <div th:if="${param.success}">
-        <div class="alert alert-info">Operation succeeded.</div>
-    </div>
-    <div th:if="${param.error}">
-        <div class="alert alert-danger">Operation failed</div>
-    </div>
-    <h3>How much money would you like to deposit?</h3>
-    <form th:action="@{/deposit}" method="post" th:object="${account}">
-        <div class="form-group">
-            <input id="amountOfMoney" type="number" min="0" class="form-control" th:field="${account.amountOfMoney}"
-                   placeholder="Enter amount of money" autofocus="autofocus"/>
-            <div class="alert alert-warning" th:if="${#fields.hasErrors('amountOfMoney')}" th:errors="${account.amountOfMoney}"></div>
+    <div class="col-md-8">
+        <div th:if="${param.success}">
+            <div class="alert alert-info">Operation succeeded.</div>
         </div>
-        <div>
-            <button type="submit" class="btn btn-success">Deposit</button>
+        <div th:if="${param.error}">
+            <div class="alert alert-danger">Operation failed</div>
         </div>
-    </form>
+        <h3>How much money would you like to deposit?</h3>
+        <form th:action="@{/deposit}" method="post" th:object="${account}">
+            <div class="form-group">
+                <input id="amountOfMoney" type="number" min="0" class="form-control" th:field="${account.amountOfMoney}"
+                       placeholder="Enter amount of money" autofocus="autofocus"/>
+                <div class="alert alert-warning" th:if="${#fields.hasErrors('amountOfMoney')}"
+                     th:errors="${account.amountOfMoney}"></div>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-success">Deposit</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <h1>You current balance:</h1>
+        <h3 style="display: inline-block">Money on the balance:  </h3>
+        <h3 style="display: inline-block" th:text="${money}"></h3>
+        <br>
+        <h3 style="display: inline-block">Bitcoin on the balance: </h3>
+        <h3 style="display: inline-block" th:text="${bitcoin}"></h3>
+    </div>
 </div>
 </body>
 </html>

@@ -27,23 +27,35 @@
 <br>
 <br>
 <div class="container">
-    <div th:if="${param.success}">
-        <div class="alert alert-info">Operation succeeded.</div>
-    </div>
-    <div th:if="${param.error}">
-        <div class="alert alert-danger">Operation failed</div>
-    </div>
-    <h3>How much bitcoin would you like to sell?</h3>
-    <form th:action="@{/sell_bitcoin}" method="post" th:object="${account}">
-        <div class="form-group">
-            <input id="amountOfBitcoin" type="number" min="0.00000" th:max="${currentBitcoinBalance}" step="0.00001" class="form-control" th:field="${account.amountOfBitcoin}"
-                   placeholder="Enter amount of Bitcoin" autofocus="autofocus"/>
-            <div class="alert alert-warning" th:if="${#fields.hasErrors('amountOfBitcoin')}" th:errors="${account.amountOfBitcoin}"></div>
+    <div class="col-md-8">
+        <div th:if="${param.success}">
+            <div class="alert alert-info">Operation succeeded.</div>
         </div>
-        <div>
-            <button type="submit" class="btn btn-success">Sell</button>
+        <div th:if="${param.error}">
+            <div class="alert alert-danger">Operation failed</div>
         </div>
-    </form>
+        <h3>How much bitcoin would you like to sell?</h3>
+        <form th:action="@{/sell_bitcoin}" method="post" th:object="${account}">
+            <div class="form-group">
+                <input id="amountOfBitcoin" type="number" min="0.00000" th:max="${currentBitcoinBalance}" step="0.00001"
+                       class="form-control" th:field="${account.amountOfBitcoin}"
+                       placeholder="Enter amount of Bitcoin" autofocus="autofocus"/>
+                <div class="alert alert-warning" th:if="${#fields.hasErrors('amountOfBitcoin')}"
+                     th:errors="${account.amountOfBitcoin}"></div>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-success">Sell</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <h1>You current balance:</h1>
+        <h3 style="display: inline-block">Money on the balance:  </h3>
+        <h3 style="display: inline-block" th:text="${money}"></h3>
+        <br>
+        <h3 style="display: inline-block">Bitcoin on the balance: </h3>
+        <h3 style="display: inline-block" th:text="${bitcoin}"></h3>
+    </div>
 </div>
 </body>
 </html>

@@ -5,6 +5,7 @@ import com.aslanmagamaev.crypto_exchange.entity.Account;
 import com.aslanmagamaev.crypto_exchange.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -31,12 +32,14 @@ public class WithdrawController {
     }
 
     @GetMapping
-    public String showWithdrawForm() {
+    public String showWithdrawForm(Model model) {
+        model.addAttribute("money", accountService.getCurrentAccount().getAmountOfMoney());
+        model.addAttribute("bitcoin", accountService.getCurrentAccount().getAmountOfBitcoin());
         return "withdraw";
     }
 
     @PostMapping
-    public String withdrawAccount(@Valid @ModelAttribute("account") AccountDto accountDto, BindingResult bindingResult) {
+    public String withdrawAccount(@Valid @ModelAttribute AccountDto accountDto, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "withdraw";
         }

@@ -27,6 +27,7 @@
 <br>
 <br>
 <div class="container">
+    <div class="col-md-8">
     <div th:if="${param.success}">
         <div class="alert alert-info">Operation succeeded.</div>
     </div>
@@ -44,6 +45,15 @@
             <button type="submit" class="btn btn-success">Withdraw</button>
         </div>
     </form>
+    </div>
+    <div class="col-md-4">
+        <h1>You current balance:</h1>
+        <h3 style="display: inline-block">Money on the balance:  </h3>
+        <h3 style="display: inline-block" th:text="${money}"></h3>
+        <br>
+        <h3 style="display: inline-block">Bitcoin on the balance: </h3>
+        <h3 style="display: inline-block" th:text="${bitcoin}"></h3>
+    </div>
 </div>
 </body>
 </html>
